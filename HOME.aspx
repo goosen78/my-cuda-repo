@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HOME.aspx.cs" Inherits="H2_Debug___STUDENT.HOME" MaintainScrollPositionOnPostback="true" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HOME.aspx.cs" Inherits="H2_Debug___STUDENT.HOME" MaintainScrollPositionOnPostback="true" %>
 
 <!DOCTYPE html>
 
@@ -18,14 +18,15 @@
                 <h1>Welcome to Homework #1</h1>
             </div>
             <div class="row">
+				<div class="col-sm-12 orangebox">
                 <p>
                         Correct the HTML errors on this page that will enable 
                         this text to display inside the orange-bordered box.                
                     
-                <div class="col-sm-12 orangebox">
+                
                     </p>
                 </div>
-            <%--</div>--%> 
+            </div>
             <div class="row">
                 <div class="col-sm-12 btnbox">
                     <asp:Button ID="btnTextInBox" runat="server" class="btn btn-dark" Text="CLICK once text is inside orange box." OnClick="btnTextInBox_Click" />
@@ -36,7 +37,7 @@
                     <asp:Label ID="lblImageMessage" runat="server" Text="Correct errors to make the image on the right display." Visible="False"></asp:Label>
                 </div>
                 <div id="PistolPete" class="col-sm-6">
-                    <asp:Image ID="imgPistolPete" class="pistolpete d-block img-fluid mx-auto" runat="server" ImageUrl="~/imgaes/PistolPeteCC.jpg" Visible="False" /><br />
+                    <asp:Image ID="imgPistolPete" class="pistolpete d-block img-fluid mx-auto" runat="server" ImageUrl="~/images/PistolPeteCC.jpg" Visible="False" /><br />
                     <br />
                     <asp:Button ID="btnImageDisplayed" runat="server" class="btn btn-dark d-block mx-auto" Text="CLIKC once image displays." Visible="False" OnClick="btnImageDisplayed_Click" />
                     <div class="LabelImgMsgText">
@@ -46,7 +47,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-4 ShortName">
-                    <asp:Label ID="lblShortNameLabel" runat="server" Text="Enter yuor okstate Short Name: " Visible="False"></asp:Label>
+                    <asp:Label ID="lblShortNameLabel" runat="server" Text="Enter your okstate Short Name: " Visible="False"></asp:Label>
                     <asp:TextBox ID="tboxShortName" runat="server" CssClass="form-control" Visible="False" AutoPostBack="True" CausesValidation="True" OnTextChanged="tboxShortName_TextChanged" ValidationGroup="ShortNameGroup"></asp:TextBox><br />
                     <asp:RequiredFieldValidator ID="rfvShortName" runat="server" ErrorMessage="Please enter your okstate Short Name." ControlToValidate="tboxShortName" ValidationGroup="ShortNameGroup"></asp:RequiredFieldValidator>
                 </div>
