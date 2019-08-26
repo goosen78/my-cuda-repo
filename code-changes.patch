@@ -1,0 +1,86 @@
+From 94b5183087d5c7b088f2ce538bb3493a526c20fe Mon Sep 17 00:00:00 2001
+From: Harrison Goosen <43162286+goosen78@users.noreply.github.com>
+Date: Mon, 26 Aug 2019 16:45:39 -0500
+Subject: [PATCH] Update HOME.aspx.cs
+
+---
+ HOME.aspx | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+ HOME.aspx.cs | 6 +++---
+ 2 file changed, 8 insertions(+), 7 deletions(-)
+ ---
+diff --git a/HOME.aspx b/HOME.aspx
+index 51368e3..8669b14 100644
+--- a/HOME.aspx
++++ b/HOME.aspx
+@@ -18,14 +18,15 @@
+                 <h1>Welcome to Homework #1</h1>
+             </div>
+             <div class="row">
++				<div class="col-sm-12 orangebox">
+                 <p>
+                         Correct the HTML errors on this page that will enable 
+                         this text to display inside the orange-bordered box.                
+                     
+-                <div class="col-sm-12 orangebox">
++                
+                     </p>
+                 </div>
+-            <%--</div>--%> 
++            </div>
+             <div class="row">
+                 <div class="col-sm-12 btnbox">
+                     <asp:Button ID="btnTextInBox" runat="server" class="btn btn-dark" Text="CLICK once text is inside orange box." OnClick="btnTextInBox_Click" />
+@@ -36,7 +37,7 @@
+                     <asp:Label ID="lblImageMessage" runat="server" Text="Correct errors to make the image on the right display." Visible="False"></asp:Label>
+                 </div>
+                 <div id="PistolPete" class="col-sm-6">
+-                    <asp:Image ID="imgPistolPete" class="pistolpete d-block img-fluid mx-auto" runat="server" ImageUrl="~/imgaes/PistolPeteCC.jpg" Visible="False" /><br />
++                    <asp:Image ID="imgPistolPete" class="pistolpete d-block img-fluid mx-auto" runat="server" ImageUrl="~/images/PistolPeteCC.jpg" Visible="False" /><br />
+                     <br />
+                     <asp:Button ID="btnImageDisplayed" runat="server" class="btn btn-dark d-block mx-auto" Text="CLIKC once image displays." Visible="False" OnClick="btnImageDisplayed_Click" />
+                     <div class="LabelImgMsgText">
+@@ -46,7 +47,7 @@
+             </div>
+             <div class="row">
+                 <div class="col-sm-4 ShortName">
+-                    <asp:Label ID="lblShortNameLabel" runat="server" Text="Enter yuor okstate Short Name: " Visible="False"></asp:Label>
++                    <asp:Label ID="lblShortNameLabel" runat="server" Text="Enter your okstate Short Name: " Visible="False"></asp:Label>
+                     <asp:TextBox ID="tboxShortName" runat="server" CssClass="form-control" Visible="False" AutoPostBack="True" CausesValidation="True" OnTextChanged="tboxShortName_TextChanged" ValidationGroup="ShortNameGroup"></asp:TextBox><br />
+                     <asp:RequiredFieldValidator ID="rfvShortName" runat="server" ErrorMessage="Please enter your okstate Short Name." ControlToValidate="tboxShortName" ValidationGroup="ShortNameGroup"></asp:RequiredFieldValidator>
+                 </div>
+diff --git a/HOME.aspx.cs b/HOME.aspx.cs
+index 2778faf..6bd61f8 100644
+--- a/HOME.aspx.cs
++++ b/HOME.aspx.cs
+@@ -64,7 +64,7 @@ protected void tboxShortName_TextChanged(object sender, EventArgs e)
+ 
+         protected void btnGetCode_Click(object sender, EventArgs e)
+         {
+-            This should be a comment. Make it a comment to avoid the compiler errors.
++            //This should be a comment. Make it a comment to avoid the compiler errors.
+ 
+             //This will read the database to get a unique code just for you.
+             SqlConnection MyConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["zz_kstromConnectionString"].ConnectionString);
+@@ -96,10 +96,10 @@ protected void btnGetCode_Click(object sender, EventArgs e)
+                     lblMyEmailLabel.Visible = true;
+                     tboxEmail.Visible = true;
+                     lblMyPasswordLabel.Visible = true;
+                     tboxPassword.Visible = true;                    
+
+                 }
+             }
+-            catch (Exception ex)
++            catch (Exception)
+             {
+                 lblMessage.Text = "Invalid Shortname entered. Please try again.";
+             }
+@@ -133,7 +133,7 @@ protected void btnEmailCode_Click(object sender, EventArgs e)
+ 
+                 lblSuccess.Text = "Your code has been sent to Professor Strom. Print this page to a pdf and upload the pdf to Canvas.";
+             }
+-            catch (Exception ex)
++            catch (Exception)
+             {
+                 lblSuccess.Text = "Email credentials are invalid. Please try again.";
+             }
