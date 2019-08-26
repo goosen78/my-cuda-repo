@@ -16,7 +16,7 @@ namespace H2_Debug___STUDENT
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void btnTextInBox_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace H2_Debug___STUDENT
 
                 //Hide the error message text;
                 lblImgErrMsg.Text = "";
-                lblImgErrMsg.Visible = false;    
+                lblImgErrMsg.Visible = false;
             }
             else
             {
@@ -64,7 +64,7 @@ namespace H2_Debug___STUDENT
 
         protected void btnGetCode_Click(object sender, EventArgs e)
         {
-            This should be a comment. Make it a comment to avoid the compiler errors.
+            //This should be a comment. Make it a comment to avoid the compiler errors.
 
             //This will read the database to get a unique code just for you.
             SqlConnection MyConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["zz_kstromConnectionString"].ConnectionString);
@@ -96,10 +96,10 @@ namespace H2_Debug___STUDENT
                     lblMyEmailLabel.Visible = true;
                     tboxEmail.Visible = true;
                     lblMyPasswordLabel.Visible = true;
-                    tboxPassword.Visible = true;                    
+                    tboxPassword.Visible = true;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 lblMessage.Text = "Invalid Shortname entered. Please try again.";
             }
@@ -133,7 +133,7 @@ namespace H2_Debug___STUDENT
 
                 lblSuccess.Text = "Your code has been sent to Professor Strom. Print this page to a pdf and upload the pdf to Canvas.";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 lblSuccess.Text = "Email credentials are invalid. Please try again.";
             }
