@@ -1,0 +1,717 @@
+2019/08/28 16:10:10 [DBG] Log Level set to LogLevelDebug (4)
+2019/08/28 16:10:10 [INF] clr-installer: 2.1.1, built on 2019-08-01_00:33:46_UTC
+2019/08/28 16:10:10 [DBG] Loading config file: /home/harry/Downloads/clr-installer-master/installer.yaml
+2019/08/28 16:10:10 [INF] Querying Clear Linux version
+2019/08/28 16:10:10 [DBG] PrivateIP: Found IP: 52.38.159.119, Private IP?: false
+2019/08/28 16:10:10 [DBG] PrivateIP: Found IP: 34.216.108.193, Private IP?: false
+2019/08/28 16:10:10 [DBG] localectl list-keymaps --no-pager
+2019/08/28 16:10:10 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:10 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:10 [DBG] cmd.Env: []
+2019/08/28 16:10:10 [DBG] timedatectl list-timezones
+2019/08/28 16:10:10 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:10 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:10 [DBG] cmd.Env: []
+2019/08/28 16:10:10 [DBG] locale -a
+2019/08/28 16:10:10 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:10 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:10 [DBG] cmd.Env: []
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'agr_PE.UTF-8'
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'ayc_PE.UTF-8'
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'ber_DZ.UTF-8'
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'ber_MA.UTF-8'
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'bhb_IN.UTF-8'
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'hne_IN.UTF-8'
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'miq_NI.UTF-8'
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'mjw_IN.UTF-8'
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'nhn_MX.UTF-8'
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'shs_CA.UTF-8'
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'the_NP.UTF-8'
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'unm_US.UTF-8'
+2019/08/28 16:10:10 [DBG] Unable to use language locale 'yuw_PG.UTF-8'
+2019/08/28 16:10:10 [DBG] Starting install
+2019/08/28 16:10:10 [INF] Running pre-install hooks
+2019/08/28 16:10:10 [DBG] Clear Linux version: 30770
+2019/08/28 16:10:10 [DBG] proxy.SetHTTPSProxy = 
+2019/08/28 16:10:12 [INF] Testing connectivity
+2019/08/28 16:10:12 [DBG] /usr/bin/timeout --kill-after=10s 10s /usr/bin/curl --no-sessionid -o /dev/null -s -f https://cdn.download.clearlinux.org/update/
+2019/08/28 16:10:12 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:12 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:12 [DBG] cmd.Env: []
+2019/08/28 16:10:13 [DBG] qemu-img create -f raw installer.iso 8589934592
+2019/08/28 16:10:13 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:13 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:13 [DBG] cmd.Env: []
+2019/08/28 16:10:13 [DBG] Formatting 'installer.iso', fmt=raw size=8589934592
+2019/08/28 16:10:13 [DBG] losetup --find --show installer.iso
+2019/08/28 16:10:13 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:13 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:13 [DBG] cmd.Env: []
+2019/08/28 16:10:13 [INF] Writing partition table to: loop0
+2019/08/28 16:10:13 [DBG] parted -s /dev/loop0 mklabel gpt
+2019/08/28 16:10:13 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:13 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:13 [DBG] cmd.Env: []
+2019/08/28 16:10:13 [INF] Updating partition table for: loop0
+2019/08/28 16:10:13 [DBG] WritePartitionTable: remove partitions : []
+2019/08/28 16:10:13 [DBG] parted --machine --script -- /dev/loop0 unit B print
+2019/08/28 16:10:13 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:13 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:13 [DBG] cmd.Env: []
+2019/08/28 16:10:13 [DBG] Partitions before sorting:
+2019/08/28 16:10:13 [DBG] loop0p1
+%!!(MISSING)(EXTRA string=vfat, string=/boot, uint64=536870912, storage.BlockDeviceType=part)
+2019/08/28 16:10:13 [DBG] loop0p2
+%!!(MISSING)(EXTRA string=swap, string=, uint64=1073741824, storage.BlockDeviceType=part)
+2019/08/28 16:10:13 [DBG] loop0p3
+%!!(MISSING)(EXTRA string=ext4, string=/, uint64=0, storage.BlockDeviceType=part)
+2019/08/28 16:10:13 [DBG] Partitions after sorting:
+2019/08/28 16:10:13 [DBG] loop0p1
+%!!(MISSING)(EXTRA string=vfat, string=/boot, uint64=536870912, storage.BlockDeviceType=part)
+2019/08/28 16:10:13 [DBG] loop0p2
+%!!(MISSING)(EXTRA string=swap, string=, uint64=1073741824, storage.BlockDeviceType=part)
+2019/08/28 16:10:13 [DBG] loop0p3
+%!!(MISSING)(EXTRA string=ext4, string=/, uint64=0, storage.BlockDeviceType=part)
+2019/08/28 16:10:13 [DBG] WritePartitionTable: processing child: &{loop0p1     vfat   /boot  536870912 part  false false [] <nil> false true true  false 0 [] []}
+2019/08/28 16:10:13 [DBG] WritePartitionTable: WholeDisk mode
+2019/08/28 16:10:13 [DBG] WritePartitionTable: start: 0, end: 536870912
+2019/08/28 16:10:13 [DBG] WritePartitionTable: mkPartCmd: mkpart EFI fat32 0%!M(MISSING)
+2019/08/28 16:10:13 [DBG] parted -a optimal /dev/loop0 unit MB --script -- mkpart EFI fat32 0%!M(MISSING)
+2019/08/28 16:10:13 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:13 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:13 [DBG] cmd.Env: []
+2019/08/28 16:10:13 [DBG] parted --machine --script -- /dev/loop0 unit B print
+2019/08/28 16:10:13 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:13 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:13 [DBG] cmd.Env: []
+2019/08/28 16:10:13 [DBG] WritePartitionTable: processing child: &{loop0p2     swap     1073741824 part  false false [] <nil> false true true  false 0 [] []}
+2019/08/28 16:10:13 [DBG] WritePartitionTable: WholeDisk mode
+2019/08/28 16:10:13 [DBG] WritePartitionTable: start: 536870912, end: 1610612736
+2019/08/28 16:10:13 [DBG] WritePartitionTable: mkPartCmd: mkpart linux-swap 536M 1610M
+2019/08/28 16:10:13 [DBG] parted -a optimal /dev/loop0 unit MB --script -- mkpart linux-swap 536M 1610M
+2019/08/28 16:10:13 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:13 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:13 [DBG] cmd.Env: []
+2019/08/28 16:10:13 [DBG] parted --machine --script -- /dev/loop0 unit B print
+2019/08/28 16:10:13 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:13 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:13 [DBG] cmd.Env: []
+2019/08/28 16:10:13 [DBG] WritePartitionTable: processing child: &{loop0p3     ext4   /  0 part  false false [] <nil> false true true  false 0 [] []}
+2019/08/28 16:10:13 [DBG] WritePartitionTable: WholeDisk mode
+2019/08/28 16:10:13 [DBG] WritePartitionTable: start: 1610612736, end: 1610612736
+2019/08/28 16:10:13 [DBG] WritePartitionTable: mkPartCmd: mkpart / 1610M -1
+2019/08/28 16:10:13 [DBG] parted -a optimal /dev/loop0 unit MB --script -- mkpart / 1610M -1
+2019/08/28 16:10:13 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:13 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:13 [DBG] cmd.Env: []
+2019/08/28 16:10:13 [DBG] parted --machine --script -- /dev/loop0 unit B print
+2019/08/28 16:10:13 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:13 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:13 [DBG] cmd.Env: []
+2019/08/28 16:10:13 [INF] Adjusting filesystem configurations
+2019/08/28 16:10:13 [DBG] sgdisk /dev/loop0 --typecode=2:0657FD6D-A4AB-43C4-84E5-0933C84B4F4F
+2019/08/28 16:10:13 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:13 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:13 [DBG] cmd.Env: []
+2019/08/28 16:10:15 [DBG] Warning: The kernel is still using the old partition table.
+2019/08/28 16:10:15 [DBG] The new table will be used at the next reboot or after you
+2019/08/28 16:10:15 [DBG] run partprobe(8) or kpartx(8)
+2019/08/28 16:10:15 [DBG] The operation has completed successfully.
+2019/08/28 16:10:15 [DBG] sgdisk /dev/loop0 --typecode=3:4F68BCE3-E8CD-4DB1-96E7-FBCAF984B709
+2019/08/28 16:10:15 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:15 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:15 [DBG] cmd.Env: []
+2019/08/28 16:10:16 [DBG] Warning: The kernel is still using the old partition table.
+2019/08/28 16:10:16 [DBG] The new table will be used at the next reboot or after you
+2019/08/28 16:10:16 [DBG] run partprobe(8) or kpartx(8)
+2019/08/28 16:10:16 [DBG] The operation has completed successfully.
+2019/08/28 16:10:16 [DBG] sgdisk /dev/loop0 --typecode=1:C12A7328-F81F-11D2-BA4B-00A0C93EC93B
+2019/08/28 16:10:16 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:16 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:16 [DBG] cmd.Env: []
+2019/08/28 16:10:17 [DBG] Warning: The kernel is still using the old partition table.
+2019/08/28 16:10:17 [DBG] The new table will be used at the next reboot or after you
+2019/08/28 16:10:17 [DBG] run partprobe(8) or kpartx(8)
+2019/08/28 16:10:17 [DBG] The operation has completed successfully.
+2019/08/28 16:10:17 [DBG] parted /dev/loop0 set 1 boot on
+2019/08/28 16:10:17 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:17 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:17 [DBG] cmd.Env: []
+2019/08/28 16:10:17 [DBG] Information: You may need to update /etc/fstab.
+2019/08/28 16:10:17 [DBG]                                                                           
+2019/08/28 16:10:17 [DBG] partprobe /dev/loop0
+2019/08/28 16:10:17 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:17 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:17 [DBG] cmd.Env: []
+2019/08/28 16:10:21 [INF] Writing vfat file system to loop0p1 '/boot'
+2019/08/28 16:10:21 [DBG] mkfs.vfat -F32 /dev/loop0p1
+2019/08/28 16:10:21 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:21 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:21 [DBG] cmd.Env: []
+2019/08/28 16:10:21 [DBG] mkfs.fat 4.1 (2017-01-24)
+2019/08/28 16:10:21 [INF] Writing swap file system to loop0p2
+2019/08/28 16:10:21 [DBG] mkswap /dev/loop0p2
+2019/08/28 16:10:21 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:21 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:21 [DBG] cmd.Env: []
+2019/08/28 16:10:21 [DBG] Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+2019/08/28 16:10:21 [DBG] no label, UUID=218f37b4-4902-4dce-bccd-3b549e4baee6
+2019/08/28 16:10:21 [INF] Writing ext4 file system to loop0p3 '/'
+2019/08/28 16:10:21 [DBG] mkfs.ext4 -v -F -b 4096 /dev/loop0p3
+2019/08/28 16:10:21 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:21 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:21 [DBG] cmd.Env: []
+2019/08/28 16:10:21 [DBG] mke2fs 1.45.3 (14-Jul-2019)
+2019/08/28 16:10:21 [DBG] fs_types for mke2fs.conf resolution: 'ext4'
+2019/08/28 16:10:21 [DBG] Discarding device blocks:    4096/1703936
+2019/08/28 16:10:21 [DBG]                done                            
+2019/08/28 16:10:21 [DBG] Filesystem label=
+2019/08/28 16:10:21 [DBG] OS type: Linux
+2019/08/28 16:10:21 [DBG] Block size=4096 (log=2)
+2019/08/28 16:10:21 [DBG] Fragment size=4096 (log=2)
+2019/08/28 16:10:21 [DBG] Stride=0 blocks, Stripe width=256 blocks
+2019/08/28 16:10:21 [DBG] 425984 inodes, 1703936 blocks
+2019/08/28 16:10:21 [DBG] 85196 blocks (5.00%!!(MISSING))(MISSING) reserved for the super user
+2019/08/28 16:10:21 [DBG] First data block=0
+2019/08/28 16:10:21 [DBG] Maximum filesystem blocks=1744830464
+2019/08/28 16:10:21 [DBG] 52 block groups
+2019/08/28 16:10:21 [DBG] 32768 blocks per group, 32768 fragments per group
+2019/08/28 16:10:21 [DBG] 8192 inodes per group
+2019/08/28 16:10:21 [DBG] Filesystem UUID: 245ff67f-3495-407c-881a-062ffb17edeb
+2019/08/28 16:10:21 [DBG] Superblock backups stored on blocks: 
+2019/08/28 16:10:21 [DBG] 	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+2019/08/28 16:10:21 [DBG] Allocating group tables:  0/52
+2019/08/28 16:10:21 [DBG]      done                            
+2019/08/28 16:10:21 [DBG] Writing inode tables:  0/52
+2019/08/28 16:10:21 [DBG]      done                            
+2019/08/28 16:10:21 [DBG] Creating journal (16384 blocks): 
+2019/08/28 16:10:21 [DBG] done
+2019/08/28 16:10:21 [DBG] Writing superblocks and filesystem accounting information: 
+2019/08/28 16:10:21 [DBG]  0/52
+2019/08/28 16:10:21 [DBG]      
+2019/08/28 16:10:21 [DBG] done
+2019/08/28 16:10:21 [DBG] partprobe -s
+2019/08/28 16:10:21 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:21 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:21 [DBG] cmd.Env: []
+2019/08/28 16:10:21 [DBG] /dev/sda: gpt partitions 1 2 3
+2019/08/28 16:10:21 [DBG] /dev/nvme0n1: gpt partitions 1 2 3 4
+2019/08/28 16:10:21 [DBG] lsblk --exclude 1,2,11 -J -b -O
+2019/08/28 16:10:21 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:21 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:21 [DBG] cmd.Env: []
+2019/08/28 16:10:21 [DBG] parted --machine --script -- /dev/loop0 unit B print free
+2019/08/28 16:10:21 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:21 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:21 [DBG] cmd.Env: []
+2019/08/28 16:10:21 [DBG] setPartitionTable() line is "BYT"
+2019/08/28 16:10:21 [DBG] setPartitionTable() line is "/dev/loop0:8589934592B:loopback:512:512:gpt:Loopback device:"
+2019/08/28 16:10:21 [DBG] setPartitionTable() line is "1:17408B:1048575B:1031168B:free"
+2019/08/28 16:10:21 [DBG] setPartitionTable() line is "1:1048576B:535822335B:534773760B:fat32:EFI:boot, esp"
+2019/08/28 16:10:21 [DBG] setPartitionTable() line is "2:535822336B:1609564159B:1073741824B:linux-swap(v1):linux-swap:"
+2019/08/28 16:10:21 [DBG] setPartitionTable() line is "3:1609564160B:8588886015B:6979321856B:ext4:/:"
+2019/08/28 16:10:21 [DBG] setPartitionTable() line is "1:8588886016B:8589917695B:1031680B:free"
+2019/08/28 16:10:21 [DBG] setPartitionTable() line is ""
+2019/08/28 16:10:21 [DBG] parted --machine --script -- /dev/sda unit B print free
+2019/08/28 16:10:21 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:21 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:21 [DBG] cmd.Env: []
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "BYT"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "/dev/sda:124218507264B:scsi:512:512:gpt:SanDisk Ultra Fit:"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "1:17408B:1048575B:1031168B:free"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "1:1048576B:157286399B:156237824B:fat32:EFI:boot, esp"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "2:157286400B:189792255B:32505856B:linux-swap(v1):linux-swap:"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "3:189792256B:124218490367B:124028698112B:ext4:/:"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is ""
+2019/08/28 16:10:22 [DBG] parted --machine --script -- /dev/nvme0n1 unit B print free
+2019/08/28 16:10:22 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:22 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:22 [DBG] cmd.Env: []
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "BYT"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "/dev/nvme0n1:512110190592B:unknown:512:512:gpt:Unknown:"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "1:17408B:1048575B:1031168B:free"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "1:1048576B:537919487B:536870912B:fat32:EFI System Partition:boot, esp"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "2:537919488B:554696703B:16777216B:ext4:Microsoft reserved partition:msftres"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "3:554696704B:511430056959B:510875360256B:ntfs:Basic data partition:msftdata"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "1:511430056960B:511430361087B:304128B:free"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "4:511430361088B:512108789759B:678428672B:ntfs::hidden, diag"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is "1:512108789760B:512110173695B:1383936B:free"
+2019/08/28 16:10:22 [DBG] setPartitionTable() line is ""
+2019/08/28 16:10:22 [INF] Mounting: /
+2019/08/28 16:10:22 [DBG] Mounted ok: /tmp/install-322952295
+2019/08/28 16:10:22 [INF] Mounting: /boot
+2019/08/28 16:10:22 [DBG] Mounted ok: /tmp/install-322952295/boot
+2019/08/28 16:10:22 [DBG] Mounted ok: /tmp/install-322952295/proc
+2019/08/28 16:10:22 [DBG] Mounted ok: /tmp/install-322952295/sys
+2019/08/28 16:10:22 [DBG] Mounted ok: /tmp/install-322952295/dev
+2019/08/28 16:10:22 [DBG] systemd-networkd.service service is inactive
+2019/08/28 16:10:22 [DBG] NetworkManager.service service is active
+2019/08/28 16:10:22 [INF] Wired networking managed by NetworkManager.service
+2019/08/28 16:10:22 [INF] Writing mount files
+2019/08/28 16:10:22 [INF] Installing base OS and configured bundles
+2019/08/28 16:10:22 [DBG] Installing bundles: NetworkManager, NetworkManager-extras, user-basic-dev, user-basic, pidgin, perl-basic, package-utils, os-clr-on-clr, network-basic, editors, dev-utils, desktop-autostart, desktop-apps, containers-basic-dev, cloud-control, os-cloudguest, os-cloudguest-vmware, os-cloudguest-vmware-gui, os-core, os-core-plus, os-core-update, os-core-webproxy, openssh-client, openssh-server, openssl, x11-server, xfsprogs, application-server, clr-devops, cockpit, cpio, curl, dnf, dosfstools, dovecot, ethtool, file, file-roller, findutils, firefox, flatpak, flex, fonts-basic, fuse, gedit, git, httpd, intltool, iperf, ipmitool, iproute2, iptables, ipvsadm, kbd, kernel-install, kernel-native, less, lib-imageformat, lib-opengl, lib-openssl, lib-samba, libX11client, libglib, libstdcpp, libva-utils, libxml2, libxslt, linux-firmware, linux-firmware-extras, mod_wsgi, nasm, nautilus, net-tools, nfs-utils, nginx, openldap, parted, pdns, pdns-recursor, pidgin, pmdk, polkit, postgresql, python3-basic, pxe-server, qemu-guest-additions, samba, smartmontools, storage-utils, storage-utils-dev, sysadmin-hostmgmt, sysadmin-remote, syslinux, thermal_daemon, time-server-basic, uwsgi, kernel-native
+2019/08/28 16:10:22 [DBG] Bundle os-core was already installed with the core bundles, skipping
+2019/08/28 16:10:22 [DBG] Bundle os-core-update was already installed with the core bundles, skipping
+2019/08/28 16:10:22 [DBG] Bundle openssh-server was already installed with the core bundles, skipping
+2019/08/28 16:10:22 [DBG] swupd os-install --path=/tmp/install-322952295 --statedir=/tmp/install-322952295/var/lib/swupd -V latest --force --no-boot-update --json-output -B os-core-update,openssh-server,NetworkManager,NetworkManager-extras,user-basic-dev,user-basic,pidgin,perl-basic,package-utils,os-clr-on-clr,network-basic,editors,dev-utils,desktop-autostart,desktop-apps,containers-basic-dev,cloud-control,os-cloudguest,os-cloudguest-vmware,os-cloudguest-vmware-gui,os-core-plus,os-core-webproxy,openssh-client,openssl,x11-server,xfsprogs,application-server,clr-devops,cockpit,cpio,curl,dnf,dosfstools,dovecot,ethtool,file,file-roller,findutils,firefox,flatpak,flex,fonts-basic,fuse,gedit,git,httpd,intltool,iperf,ipmitool,iproute2,iptables,ipvsadm,kbd,kernel-install,kernel-native,less,lib-imageformat,lib-opengl,lib-openssl,lib-samba,libX11client,libglib,libstdcpp,libva-utils,libxml2,libxslt,linux-firmware,linux-firmware-extras,mod_wsgi,nasm,nautilus,net-tools,nfs-utils,nginx,openldap,parted,pdns,pdns-recursor,pidgin,pmdk,polkit,postgresql,python3-basic,pxe-server,qemu-guest-additions,samba,smartmontools,storage-utils,storage-utils-dev,sysadmin-hostmgmt,sysadmin-remote,syslinux,thermal_daemon,time-server-basic,uwsgi,kernel-native
+2019/08/28 16:10:22 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:10:22 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:10:22 [DBG] cmd.Env: []
+2019/08/28 16:10:22 [DBG] [
+2019/08/28 16:10:22 [DBG] { "type" : "start", "section" : "verify" },
+2019/08/28 16:10:22 [DBG] { "type" : "warning", "msg" : "/tmp/install-322952295//usr/share/clear/versionstamp does not exist! " },
+2019/08/28 16:10:23 [DBG] { "type" : "progress", "currentStep" : 1, "totalSteps" : 8, "stepCompletion" : 100, "stepDescription" : "get_versions" },
+2019/08/28 16:10:23 [DBG] Setting progress for task get_versions
+2019/08/28 16:10:23 [DBG] Task get_versions completed
+2019/08/28 16:10:23 [DBG] { "type" : "info", "msg" : "Installing OS version 30880 (latest) " },
+2019/08/28 16:10:23 [DBG] { "type" : "progress", "currentStep" : 2, "totalSteps" : 8, "stepCompletion" : 100, "stepDescription" : "cleanup_download_dir" },
+2019/08/28 16:10:23 [DBG] Setting progress for task cleanup_download_dir
+2019/08/28 16:10:23 [DBG] Task cleanup_download_dir completed
+2019/08/28 16:11:08 [DBG] { "type" : "progress", "currentStep" : 3, "totalSteps" : 8, "stepCompletion" : 100, "stepDescription" : "load_manifests" },
+2019/08/28 16:11:08 [DBG] Setting progress for task load_manifests
+2019/08/28 16:11:08 [DBG] Task load_manifests completed
+2019/08/28 16:11:08 [DBG] { "type" : "progress", "currentStep" : 4, "totalSteps" : 8, "stepCompletion" : 100, "stepDescription" : "consolidate_files" },
+2019/08/28 16:11:08 [DBG] Setting progress for task consolidate_files
+2019/08/28 16:11:08 [DBG] Task consolidate_files completed
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : "Downloading packs (9299.57 Mb) for: " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - editors-dev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libvirt " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - kvm-host-dev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-colord " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - java-runtime " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - elasticsearch " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-freeglut " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-gflags " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-gperftools " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-iso-codes " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-json-glib " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-lcms2 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libcroco " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libevdev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libgudev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libgusb " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libdatrie " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libthai " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-mozjs60 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-oath-toolkit " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-orc " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-parted " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libpsl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libsoup " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-rest " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-shared-mime-info " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-usbredir " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-xkeyboard-config " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-xmlsec1 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - zsh " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - shells " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-SDL " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-alsa-lib " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-glu " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-glew " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-googletest " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-gsl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-guile " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-hwloc " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXScrnSaver " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXmu " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXpm " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXres " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXt " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXxf86misc " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libinput " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libpciaccess " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-metrics-discovery " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-openmpi " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-postgresql " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-subunit " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - subversion " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - texlive " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-tiff " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - dev-utils-dev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - go-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - mutt " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - notmuch " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - mail-utils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-gmime " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - qt-core " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - qt-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gpgme " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-lua " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-xapian-core " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - mail-utils-dev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-ipset " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libnetfilter_cthelper " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libnetfilter_cttimeout " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libnetfilter_queue " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-librsvg " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-nftables " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-nspr " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-nss " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-pkcs11-helper " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - network-basic-dev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - nodejs-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-pacrunner " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - os-core-update-dev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - plzip " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - package-builder " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - perl-basic-dev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-apr " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libpcap " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libssh2 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-pciutils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - sysadmin-basic-dev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - unbundle " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - cabextract " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - diffoscope " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - global " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-gtk " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - libarchive " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libva " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXau " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXdmcp " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libxcb " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXdamage " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXfixes " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXv " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXvMC " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXext " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXxf86vm " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libzip " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - mkosi " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-pmdk " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - scons " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-telemetrics-client " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - clr-network-troubleshooter " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - dpdk " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - openvswitch " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - wget " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - znc " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - emacs " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - joe " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - vim " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - bc " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - cloc " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - icdiff " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - inotify-tools " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - linux-tools " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-llvm " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - rsync " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gimp " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - desktop-assets " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - desktop-locales " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - hardware-printing " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - alsa-utils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - pulseaudio " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - desktop " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - emacs-x11 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gvim " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - baobab " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - cheese " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - eog " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - evince " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - evolution " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - webkitgtk " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - geary " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-calculator " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-characters " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-color-manager " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-disk-utility " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-font-viewer " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-logs " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-music " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-photos " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-screenshot " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-system-monitor " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-todo " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-weather " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - seahorse " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - totem " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-gcr " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gjs " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXtst " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-at-spi2-core " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-at-spi2-atk " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-atk " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-gdk-pixbuf " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libepoxy " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-fribidi " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-pango " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-wayland " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-wayland-protocols " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-gtk3 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXcursor " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libpipeline " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libsecret " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-nghttp2 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-pcre2 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-vala " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - cloud-api " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - kvm-host " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - sqlite " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - xorriso " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - python-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - java-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - openblas " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - python2-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - koji " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - containers-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - acpica-unix2 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - htop " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - man-pages " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - minicom " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - parallel " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - powertop " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - tmux " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - sysadmin-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - zstd " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - mixer " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - wpa_supplicant " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - linux-firmware-wifi " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - os-installer " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - rust-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - scm-server " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - pygobject " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gstreamer " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - desktop-gnomelibs " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gnome-base-libs " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - Remmina " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - os-core-dev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-LVM2 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - Babel " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - Sphinx " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-acl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-attr " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-audit " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-boost " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libdrm " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-mesa " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-pixman " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-cairo " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-compat-fuse-soname2 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-cryptsetup " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-curl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-cyrus-sasl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-dbus " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - diffutils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - docbook-utils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - docutils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - doxygen " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-e2fsprogs " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-elfutils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-fuse " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gdb " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-gobject-introspection " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - graphviz " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-gtk-doc " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gzip " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-icu4c " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-ipmctl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-iptables " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-json-c " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-kmod " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-krb5 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-expat " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-fontconfig " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-graphite " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-harfbuzz " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-freetype " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libXft " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libarchive " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libassuan " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libcap " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libcap-ng " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libcgroup " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libevent " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libgcrypt " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libidn " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libidn2 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libjpeg-turbo " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-gnutls " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libmicrohttpd " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libmnl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libnetfilter_conntrack " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libnfnetlink " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libnftnl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libnl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libpng " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libseccomp " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libtasn1 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libtirpc " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libunwind " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libusb " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libffi " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-glib " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libuser " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libpthread-stubs " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libX11 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libxkbcommon " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libgpg-error " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libxml2 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-libxslt " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-lz4 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-multipath-tools " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-ncurses " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-ndctl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-nettle " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-ntfs-3g " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-open-iscsi " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-openssl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - p11-kit " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-p11-kit " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - pandoc " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - patch " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-pcre " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-popt " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - procps-ng " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-qtbase " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-rdma-core " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-readline " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-sqlite-autoconf " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-startup-notification " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - strace " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-systemd " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-talloc " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - texinfo " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - tzdata " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - unzip " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-userspace-rcu " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-util-linux " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-util-macros " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - valgrind " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - which " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-xcb-proto " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-xorgproto " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-xtrans " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - xz " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-xz " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - yasm " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-zlib " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - binutils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - bison " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - glibc-locale " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - llvm " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - make " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - c-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-base " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - devpkg-zstd " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - ansible " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - sudo " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - hardware-uefi " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - bootloader " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - os-core " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - os-core-update " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - openssh-server " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - NetworkManager " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - NetworkManager-extras " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - user-basic-dev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - user-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - pidgin " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - perl-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - package-utils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - os-clr-on-clr " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - network-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - editors " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - dev-utils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - desktop-autostart " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - desktop-apps " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - containers-basic-dev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - cloud-control " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - os-cloudguest " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - os-cloudguest-vmware " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - os-cloudguest-vmware-gui " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - os-core-plus " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - os-core-webproxy " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - openssh-client " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - openssl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - x11-server " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - xfsprogs " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - application-server " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - clr-devops " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - cockpit " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - cpio " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - curl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - dnf " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - dosfstools " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - dovecot " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - ethtool " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - file " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - file-roller " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - findutils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - firefox " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - flatpak " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - flex " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - fonts-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - fuse " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - gedit " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - git " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - httpd " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - intltool " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - iperf " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - ipmitool " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - iproute2 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - iptables " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - ipvsadm " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - kbd " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - kernel-install " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - kernel-native " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - less " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - lib-imageformat " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - lib-opengl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - lib-openssl " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - lib-samba " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - libX11client " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - libglib " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - libstdcpp " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - libva-utils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - libxml2 " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - libxslt " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - linux-firmware " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - linux-firmware-extras " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - mod_wsgi " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - nasm " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - nautilus " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - net-tools " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - nfs-utils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - nginx " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - openldap " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - parted " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - pdns " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - pdns-recursor " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - pidgin " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - pmdk " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - polkit " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - postgresql " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - python3-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - pxe-server " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - qemu-guest-additions " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - samba " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - smartmontools " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - storage-utils " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - storage-utils-dev " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - sysadmin-hostmgmt " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - sysadmin-remote " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - syslinux " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - thermal_daemon " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - time-server-basic " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - uwsgi " },
+2019/08/28 16:11:43 [DBG] { "type" : "info", "msg" : " - kernel-native " },
+2019/08/28 16:11:44 [DBG] { "type" : "progress", "currentStep" : 5, "totalSteps" : 8, "stepCompletion" : 0, "stepDescription" : "download_packs" },
+2019/08/28 16:11:44 [DBG] Setting progress for task download_packs
+2019/08/28 16:13:03 [DBG] { "type" : "progress", "currentStep" : 5, "totalSteps" : 8, "stepCompletion" : 1, "stepDescription" : "download_packs" },
+2019/08/28 16:14:58 [DBG] { "type" : "progress", "currentStep" : 5, "totalSteps" : 8, "stepCompletion" : 2, "stepDescription" : "download_packs" },
+2019/08/28 16:16:55 [DBG] { "type" : "progress", "currentStep" : 5, "totalSteps" : 8, "stepCompletion" : 3, "stepDescription" : "download_packs" },
+2019/08/28 16:17:52 [DBG] telem-record-gen --severity 2 --class org.clearlinux/clr-installer/signaled --event-id 6d87263ee45e60c1276bac9bc321fc4d --payload version=2.1.1
+Interrupted by signal: interrupt
+2019/08/28 16:17:52 [DBG] Using default shellProxy.DefaultGetProxyValue
+2019/08/28 16:17:52 [DBG] [Previous line repeated 4 times]
+2019/08/28 16:17:52 [DBG] cmd.Env: []
+2019/08/28 16:17:52 [ERR] An error occurred executing command: "swupd os-install --path=/tmp/install-322952295 --statedir=/tmp/install-322952295/var/lib/swupd -V latest --force --no-boot-update --json-output -B os-core-update,openssh-server,NetworkManager,NetworkManager-extras,user-basic-dev,user-basic,pidgin,perl-basic,package-utils,os-clr-on-clr,network-basic,editors,dev-utils,desktop-autostart,desktop-apps,containers-basic-dev,cloud-control,os-cloudguest,os-cloudguest-vmware,os-cloudguest-vmware-gui,os-core-plus,os-core-webproxy,openssh-client,openssl,x11-server,xfsprogs,application-server,clr-devops,cockpit,cpio,curl,dnf,dosfstools,dovecot,ethtool,file,file-roller,findutils,firefox,flatpak,flex,fonts-basic,fuse,gedit,git,httpd,intltool,iperf,ipmitool,iproute2,iptables,ipvsadm,kbd,kernel-install,kernel-native,less,lib-imageformat,lib-opengl,lib-openssl,lib-samba,libX11client,libglib,libstdcpp,libva-utils,libxml2,libxslt,linux-firmware,linux-firmware-extras,mod_wsgi,nasm,nautilus,net-tools,nfs-utils,nginx,openldap,parted,pdns,pdns-recursor,pidgin,pmdk,polkit,postgresql,python3-basic,pxe-server,qemu-guest-additions,samba,smartmontools,storage-utils,storage-utils-dev,sysadmin-hostmgmt,sysadmin-remote,syslinux,thermal_daemon,time-server-basic,uwsgi,kernel-native". Error: signal: interrupt
+2019/08/28 16:17:52 [INF] Umounting rootDir: /tmp/install-322952295
+2019/08/28 16:17:52 [DBG] Unmounted ok: /tmp/install-322952295/sys
+2019/08/28 16:17:52 [DBG] Unmounted ok: /tmp/install-322952295/proc
+2019/08/28 16:17:52 [DBG] Unmounted ok: /tmp/install-322952295/dev
+2019/08/28 16:17:52 [DBG] Unmounted ok: /tmp/install-322952295/boot
+2019/08/28 16:17:52 [DBG] [inifile] Encountered key=value mapping without a valid section [L1]: /etc/telemetrics/telemetrics.conf
+2019/08/28 16:17:52 [DBG] Failed to read config file
+2019/08/28 16:17:52 [ERR] Failed to log Telemetry signal handler for: interrupt
